@@ -1,0 +1,18 @@
+.navBox {
+  padding: 20px;
+  border-bottom: 2px solid rgb(195, 191, 191);
+}
+
+.btn {
+  font-weight: 700;
+  margin-right: 10px;
+  text-decoration: none;
+  color: gray;
+}
+
+.active {
+  font-weight: 700;
+  margin-right: 10px;
+  text-decoration: none;
+  color: orange;
+}
