@@ -1,0 +1,9 @@
+.form {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.input {
+  width: 200px;
+  outline: none;
+}

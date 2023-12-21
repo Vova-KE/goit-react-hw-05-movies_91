@@ -1,6 +1,7 @@
 import { fetchMovieDetails, BASE_URL } from '../../service/api';
 import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
 import { useEffect, useState, Suspense } from 'react';
+import style from './style.module.css';
 import image from '../../images/defaultImage.jpg';
 
 export default function MovieDetails() {
@@ -25,11 +26,15 @@ export default function MovieDetails() {
   const cameBack = location.state?.from ?? '/';
   return (
     <div>
-      <div>
+      <div className={style.container}>
         <Link to={cameBack}>Go back</Link>
 
-        <div>
-          <img src={poster_path ? BASE_URL + poster_path : image} alt={title} />
+        <div className={style.card}>
+          <img
+            src={poster_path ? BASE_URL + poster_path : image}
+            alt={title}
+            className={style.card_img}
+          />
 
           <div>
             <h1>{original_title}</h1>
@@ -41,6 +46,7 @@ export default function MovieDetails() {
           </div>
         </div>
       </div>
+      {/* <p className={style.movie_add_info}>Additional information</p> */}
       <ul>
         <li>
           <Link to="cast" state={{ from: cameBack }}>

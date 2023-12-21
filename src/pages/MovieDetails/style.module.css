@@ -1,0 +1,14 @@
+.card_img {
+  width: 200px;
+  margin-right: 20px;
+}
+
+.card {
+  display: flex;
+}
+
+.container {
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid gray;
+}

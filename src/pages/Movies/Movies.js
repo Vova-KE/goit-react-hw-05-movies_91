@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useSearchParams, useLocation } from 'react-router-dom';
 import { fetchSearchMovie } from '../../service/api';
+import style from './style.module.css';
 
 export default function Movies() {
   const [films, setFilms] = useState([]);
@@ -11,7 +12,7 @@ export default function Movies() {
 
   const onFormSubmit = e => {
     e.preventDefault();
-    if (value === '') {
+    if (value.trim() === '') {
       return alert('You try found empty string');
     }
     setSearchParams({ query: value });
@@ -37,8 +38,13 @@ export default function Movies() {
 
   return (
     <>
-      <form onSubmit={onFormSubmit}>
-        <input type="text" value={value} onChange={handleInputChange} />
+      <form onSubmit={onFormSubmit} className={style.form}>
+        <input
+          type="text"
+          value={value}
+          onChange={handleInputChange}
+          className={style.input}
+        />
         <button type="submit">Search</button>
       </form>
       <ul>

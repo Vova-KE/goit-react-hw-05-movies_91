@@ -6,9 +6,9 @@ import AppBar from './AppBar/AppBar';
 import FilmsList from 'pages/FilmsList/FilmsList';
 import Movies from '../pages/Movies/Movies';
 import MovieDetails from '../pages/MovieDetails/MovieDetails';
-import NotFound from '../pages/NotFound/NotFound';
 import Cast from '../pages/Cast/Cast';
 import Reviews from '../pages/Reviews/Reviews';
+import NotFound from '../pages/NotFound/NotFound';
 
 export const App = () => {
   return (
