@@ -1,10 +1,11 @@
-import { Link, useLocation } from 'react-router-dom';
+// import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { fetchTrending } from '../../service/api';
+import MoviesList from 'components/MoviesList/MoviesList';
 
 export default function TrendFilmsList() {
   const [films, setFilms] = useState([]);
-  const location = useLocation();
+  // const location = useLocation();
 
   useEffect(() => {
     fetchTrending()
@@ -17,7 +18,8 @@ export default function TrendFilmsList() {
   return (
     <div>
       <h1>Trending today</h1>
-      <ul>
+      <MoviesList films={films} />
+      {/* <ul>
         {films.map(({ original_title, id }) => (
           <li key={id}>
             <Link to={`/movies/${id}`} state={{ from: location }}>
@@ -25,7 +27,7 @@ export default function TrendFilmsList() {
             </Link>
           </li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 }
